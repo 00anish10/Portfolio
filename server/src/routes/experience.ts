@@ -5,12 +5,11 @@ import { AppError } from '../middleware/errorHandler';
 
 const router = Router();
 
-function validate(req: Request, _res: Response, next: NextFunction) {
+function validate(req: Request) {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     throw new AppError(errors.array().map((e) => e.msg).join(', '), 400);
   }
-  next();
 }
 
 router.get('/', async (_req: Request, res: Response, next: NextFunction) => {
@@ -28,7 +27,7 @@ router.get('/:id', [
   param('id').isUUID().withMessage('Invalid experience ID'),
 ], async (req: Request, res: Response, next: NextFunction) => {
   try {
-    validate(req, res, next);
+    validate(req);
     const { id } = req.params;
     const result = await pool.query('SELECT * FROM experience WHERE id = $1', [id]);
     if (result.rows.length === 0) {
@@ -47,7 +46,7 @@ router.post('/', [
   body('description').notEmpty().withMessage('Description is required'),
 ], async (req: Request, res: Response, next: NextFunction) => {
   try {
-    validate(req, res, next);
+    validate(req);
     const { company, role, start_date, end_date, description, order } = req.body;
     const result = await pool.query(
       `INSERT INTO experience (company, role, start_date, end_date, description, "order")
@@ -68,7 +67,7 @@ router.put('/:id', [
   body('description').notEmpty().withMessage('Description is required'),
 ], async (req: Request, res: Response, next: NextFunction) => {
   try {
-    validate(req, res, next);
+    validate(req);
     const { id } = req.params;
     const { company, role, start_date, end_date, description, order } = req.body;
     const result = await pool.query(
@@ -89,7 +88,7 @@ router.delete('/:id', [
   param('id').isUUID().withMessage('Invalid experience ID'),
 ], async (req: Request, res: Response, next: NextFunction) => {
   try {
-    validate(req, res, next);
+    validate(req);
     const { id } = req.params;
     const result = await pool.query('DELETE FROM experience WHERE id = $1 RETURNING id', [id]);
     if (result.rows.length === 0) {

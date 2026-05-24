@@ -5,12 +5,11 @@ import { AppError } from '../middleware/errorHandler';
 
 const router = Router();
 
-function validate(req: Request, _res: Response, next: NextFunction) {
+function validate(req: Request) {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     throw new AppError(errors.array().map((e) => e.msg).join(', '), 400);
   }
-  next();
 }
 
 router.post(
@@ -23,7 +22,7 @@ router.post(
   ],
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      validate(req, res, next);
+      validate(req);
       const { name, email, subject, message } = req.body;
       const result = await pool.query(
         `INSERT INTO contact_messages (name, email, subject, message) VALUES ($1, $2, $3, $4) RETURNING *`,

@@ -4,11 +4,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const pool = new Pool({
-  host: process.env.PGHOST || 'localhost',
-  port: parseInt(process.env.PGPORT || '5432'),
-  database: process.env.PGDATABASE || 'portfolio',
-  user: process.env.PGUSER || 'postgres',
-  password: process.env.PGPASSWORD || 'postgres',
+  host: process.env.TEST_DB_HOST || 'localhost',
+  port: parseInt(process.env.TEST_DB_PORT || '5432'),
+  database: process.env.TEST_DB_NAME || 'portfolio',
+  user: process.env.TEST_DB_USER || 'postgres',
+  password: process.env.TEST_DB_PASSWORD || 'postgres',
   max: 20,
   idleTimeoutMillis: 30000,
   connectionTimeoutMillis: 2000,

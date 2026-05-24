@@ -34,7 +34,8 @@ export default function Contact() {
     try {
       await submitContact(data);
       setSubmitted(true);
-    } catch {
+    } catch (err) {
+      console.error('Contact form error:', err);
       alert('Failed to send message. Please try again.');
     }
   };
