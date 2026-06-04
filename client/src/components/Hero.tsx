@@ -30,8 +30,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Full-stack developer crafting beautiful, performant web
-              experiences with modern technologies.
+              Full Stack Developer passionate about creating beautiful and functional web experiences — from small business sites to complex web applications.
             </motion.p>
 
             <motion.div
@@ -55,15 +54,15 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <div className="stat">
-                <h3>3+</h3>
+                <h3>2+</h3>
                 <p>Years Experience</p>
               </div>
               <div className="stat">
-                <h3>20+</h3>
+                <h3>3+</h3>
                 <p>Projects Done</p>
               </div>
               <div className="stat">
-                <h3>15+</h3>
+                <h3>2+</h3>
                 <p>Happy Clients</p>
               </div>
             </motion.div>
@@ -75,7 +74,7 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="hero-avatar">AS</div>
+            <img src="/anish.jpg" alt="Anish Shrestha" className="hero-image" />
           </motion.div>
         </div>
       </div>

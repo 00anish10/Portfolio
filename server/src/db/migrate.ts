@@ -84,64 +84,54 @@ async function migrate() {
 
     await client.query(`
       INSERT INTO skills (name, category, proficiency, "order")
-      SELECT 'TypeScript', 'Frontend', 95, 1
-      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'TypeScript');
+      SELECT 'React.js', 'Frontend', 88, 1
+      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'React.js');
     `);
     await client.query(`
       INSERT INTO skills (name, category, proficiency, "order")
-      SELECT 'React', 'Frontend', 92, 2
-      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'React');
-    `);
-    await client.query(`
-      INSERT INTO skills (name, category, proficiency, "order")
-      SELECT 'Next.js', 'Frontend', 88, 3
-      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'Next.js');
-    `);
-    await client.query(`
-      INSERT INTO skills (name, category, proficiency, "order")
-      SELECT 'Node.js', 'Backend', 90, 1
+      SELECT 'Node.js', 'Backend', 85, 2
       WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'Node.js');
     `);
     await client.query(`
       INSERT INTO skills (name, category, proficiency, "order")
-      SELECT 'PostgreSQL', 'Backend', 85, 2
-      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'PostgreSQL');
-    `);
-    await client.query(`
-      INSERT INTO skills (name, category, proficiency, "order")
-      SELECT 'Python', 'Backend', 80, 3
+      SELECT 'Python', 'Backend', 78, 3
       WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'Python');
     `);
     await client.query(`
       INSERT INTO skills (name, category, proficiency, "order")
-      SELECT 'Docker', 'DevOps', 75, 1
-      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'Docker');
+      SELECT 'UI/UX Design', 'Design', 82, 4
+      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'UI/UX Design');
     `);
     await client.query(`
       INSERT INTO skills (name, category, proficiency, "order")
-      SELECT 'AWS', 'DevOps', 70, 2
-      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'AWS');
+      SELECT 'REST API Development', 'Backend', 90, 5
+      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'REST API Development');
     `);
     await client.query(`
       INSERT INTO skills (name, category, proficiency, "order")
-      SELECT 'Figma', 'Design', 82, 1
-      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'Figma');
+      SELECT 'TypeScript', 'Frontend', 80, 6
+      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'TypeScript');
+    `);
+    await client.query(`
+      INSERT INTO skills (name, category, proficiency, "order")
+      SELECT 'PostgreSQL', 'Backend', 75, 7
+      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'PostgreSQL');
+    `);
+    await client.query(`
+      INSERT INTO skills (name, category, proficiency, "order")
+      SELECT 'MySQL', 'Backend', 82, 8
+      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'MySQL');
+    `);
+    await client.query(`
+      INSERT INTO skills (name, category, proficiency, "order")
+      SELECT 'Responsive Design', 'Design', 85, 9
+      WHERE NOT EXISTS (SELECT 1 FROM skills WHERE name = 'Responsive Design');
     `);
 
     await client.query(`
       INSERT INTO experience (company, role, start_date, end_date, description, "order")
-      SELECT 'Tech Corp', 'Senior Software Engineer', '2022-03-01', NULL, 'Leading frontend architecture for the main product. Mentoring junior developers and driving adoption of TypeScript across the team.', 1
-      WHERE NOT EXISTS (SELECT 1 FROM experience WHERE company = 'Tech Corp' AND role = 'Senior Software Engineer');
-    `);
-    await client.query(`
-      INSERT INTO experience (company, role, start_date, end_date, description, "order")
-      SELECT 'StartupXYZ', 'Full Stack Developer', '2020-06-01', '2022-02-28', 'Built the core platform from the ground up using React and Node.js. Implemented CI/CD pipelines and automated testing.', 2
-      WHERE NOT EXISTS (SELECT 1 FROM experience WHERE company = 'StartupXYZ' AND role = 'Full Stack Developer');
-    `);
-    await client.query(`
-      INSERT INTO experience (company, role, start_date, end_date, description, "order")
-      SELECT 'Digital Agency', 'Junior Developer', '2018-09-01', '2020-05-31', 'Developed responsive web applications for diverse clients. Collaborated on REST API design and database schema planning.', 3
-      WHERE NOT EXISTS (SELECT 1 FROM experience WHERE company = 'Digital Agency' AND role = 'Junior Developer');
+      SELECT 'MedicSewa Pvt. Ltd.', 'Full Stack Developer', '2024-01-01', NULL, 'Architect and implement full-stack web solutions using React.js and Node.js. Collaborate closely with UI/UX designers to create intuitive user interfaces. Design and optimize RESTful APIs for seamless data flow. Manage and optimize MySQL databases for improved performance. Implement responsive designs ensuring cross-device compatibility.', 1
+      WHERE NOT EXISTS (SELECT 1 FROM experience WHERE company = 'MedicSewa Pvt. Ltd.' AND role = 'Full Stack Developer');
     `);
 
     await client.query('COMMIT');

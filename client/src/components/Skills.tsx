@@ -4,15 +4,15 @@ import { fetchSkills } from '../api/client';
 import type { Skill } from '../types';
 
 const fallbackSkills: Skill[] = [
-  { id: '1', name: 'TypeScript', category: 'Frontend', proficiency: 95, order: 1, created_at: '' },
-  { id: '2', name: 'React', category: 'Frontend', proficiency: 92, order: 2, created_at: '' },
-  { id: '3', name: 'Next.js', category: 'Frontend', proficiency: 88, order: 3, created_at: '' },
-  { id: '4', name: 'Node.js', category: 'Backend', proficiency: 90, order: 1, created_at: '' },
-  { id: '5', name: 'PostgreSQL', category: 'Backend', proficiency: 85, order: 2, created_at: '' },
-  { id: '6', name: 'Python', category: 'Backend', proficiency: 80, order: 3, created_at: '' },
-  { id: '7', name: 'Docker', category: 'DevOps', proficiency: 75, order: 1, created_at: '' },
-  { id: '8', name: 'AWS', category: 'DevOps', proficiency: 70, order: 2, created_at: '' },
-  { id: '9', name: 'Figma', category: 'Design', proficiency: 82, order: 1, created_at: '' },
+  { id: '1', name: 'React.js', category: 'Frontend', proficiency: 88, order: 1, created_at: '' },
+  { id: '2', name: 'Node.js', category: 'Backend', proficiency: 85, order: 2, created_at: '' },
+  { id: '3', name: 'Python', category: 'Backend', proficiency: 78, order: 3, created_at: '' },
+  { id: '4', name: 'UI/UX Design', category: 'Design', proficiency: 82, order: 4, created_at: '' },
+  { id: '5', name: 'REST API Development', category: 'Backend', proficiency: 90, order: 5, created_at: '' },
+  { id: '6', name: 'TypeScript', category: 'Frontend', proficiency: 80, order: 6, created_at: '' },
+  { id: '7', name: 'PostgreSQL', category: 'Backend', proficiency: 75, order: 7, created_at: '' },
+  { id: '8', name: 'MySQL', category: 'Backend', proficiency: 82, order: 8, created_at: '' },
+  { id: '9', name: 'Responsive Design', category: 'Design', proficiency: 85, order: 9, created_at: '' },
 ];
 
 export default function Skills() {

@@ -6,32 +6,12 @@ import type { Experience as ExperienceType } from '../types';
 const fallbackExperience: ExperienceType[] = [
   {
     id: '1',
-    company: 'Tech Corp',
-    role: 'Senior Software Engineer',
-    start_date: '2022-03-01',
-    end_date: null,
-    description: 'Leading frontend architecture for the main product. Mentoring junior developers and driving adoption of TypeScript across the team.',
-    order: 1,
-    created_at: '',
-  },
-  {
-    id: '2',
-    company: 'StartupXYZ',
+    company: 'MedicSewa Pvt. Ltd.',
     role: 'Full Stack Developer',
-    start_date: '2020-06-01',
-    end_date: '2022-02-28',
-    description: 'Built the core platform from the ground up using React and Node.js. Implemented CI/CD pipelines and automated testing.',
-    order: 2,
-    created_at: '',
-  },
-  {
-    id: '3',
-    company: 'Digital Agency',
-    role: 'Junior Developer',
-    start_date: '2018-09-01',
-    end_date: '2020-05-31',
-    description: 'Developed responsive web applications for diverse clients. Collaborated on REST API design and database schema planning.',
-    order: 3,
+    start_date: '2024-01-01',
+    end_date: null,
+    description: 'Architect and implement full-stack web solutions using React.js and Node.js. Collaborate closely with UI/UX designers to create intuitive user interfaces. Design and optimize RESTful APIs for seamless data flow. Manage and optimize MySQL databases for improved performance. Implement responsive designs ensuring cross-device compatibility.',
+    order: 1,
     created_at: '',
   },
 ];
@@ -64,7 +44,7 @@ export default function Experience() {
           <div className="section-label">✦ Experience</div>
           <h2 className="section-title">Where I've Worked</h2>
           <p className="section-subtitle">
-            My professional journey building products and leading teams.
+            My professional journey building full-stack web applications.
           </p>
         </motion.div>
 
