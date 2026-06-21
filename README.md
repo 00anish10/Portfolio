@@ -99,21 +99,6 @@ Graduated with Honors, GPA 3.43/4.0
 
 ---
 
-### 📊 GitHub Stats
-
-<div align="center">
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=00anish10&show_icons=true&theme=tokyonight&hide_border=true" alt="Anish's GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=00anish10&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=00anish10&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-
-</div>
-
-> 💡 These widgets pull live data from your GitHub username, so they'll populate automatically once this README is on your profile repo.
-
----
-
 ### 🤝 Connect with Me
 
 <div align="center">
